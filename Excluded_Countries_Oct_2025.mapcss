@@ -1,0 +1,42 @@
+meta {
+    title: "Do Not Edit Countries";
+    icon: "https://openmoji.org/data/color/svg/26A0.svg";
+    icon_attribution: "Author: Miriam Vollmeier; License: https://creativecommons.org/licenses/by-sa/4.0/legalcode; Modifications: none.";
+    description: "Highlights nodes and ways in RED that are in countries we should not edit in (Russia, Ukraine, Belarus, China (outside of Macau), North Korea, South Korea, Lebanon, Iran and Mexico).";
+    version: "2.0_2025-09-08";
+    author: "David Lee";
+}
+
+/* NOTES
+
+1.0_2025-03-17:	 Initial version;
+2.0_2025-06-30:  Exclude Iran due to prod freeze;
+3.0_2025-08-13:  Exclude Mexico due to prod freeze;
+4.0_2025_08-26:  Exclude Saudi Arabia, Iran;
+5.0_2025_09-08:  Exclude Iran as it is open for editing;
+6.0_2025_10-13:  Exclude Vietnam & Thailand as they out of scope countries;
+*/
+
+/* Nodes */
+
+node[inside("RU,UA,BY,CN,KP,KR,LB,MX,SA,VN,TH")][outside("MO")] {
+  set .node_alert;
+}
+
+node.node_alert {
+  symbol-shape: circle;
+  symbol-size: 20;
+  symbol-fill-color: red;
+  symbol-stroke-color: red;
+}
+
+/* Ways */
+
+way[inside("RU,UA,BY,CN,KP,KR,LB,MX,SA,VN,TH")][outside("MO")] {
+  set .way_alert;
+}
+
+way.way_alert {
+  width: 10;
+  color: red;
+}
