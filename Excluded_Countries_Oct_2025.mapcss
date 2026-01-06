@@ -19,7 +19,7 @@ meta {
 
 /* Nodes */
 
-node[inside("RU,UA,BY,CN,KP,KR,LB,MX,SA,VN,TH,VE")][outside("MO")] {
+node[inside("RU,UA,BY,CN,KP,KR,LB,MX,SA,VN,TH,VE,IN")][outside("MO")] {
   set .node_alert;
 }
 
@@ -32,7 +32,7 @@ node.node_alert {
 
 /* Ways */
 
-way[inside("RU,UA,BY,CN,KP,KR,LB,MX,SA,VN,TH,VE")][outside("MO")] {
+way[inside("RU,UA,BY,CN,KP,KR,LB,MX,SA,VN,TH,VE,IN")][outside("MO")] {
   set .way_alert;
 }
 
