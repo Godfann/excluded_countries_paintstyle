@@ -15,11 +15,12 @@ meta {
 4.0_2025_08-26:  Exclude Saudi Arabia, Iran;
 5.0_2025_09-08:  Exclude Iran as it is open for editing;
 6.0_2025_10-13:  Exclude Vietnam & Thailand as they out of scope countries;
+7.0_2026-07-31:  Exclude Yemen country from out of scope countries;
 */
 
 /* Nodes */
 
-node[inside("RU,UA,BY,CN,KP,KR,LB,MX,SA,VN,TH,VE,IN,IR,US,IL,YE,BH,PK,QA,AE,KW,JO,IQ,IRQ")][outside("MO")] {
+node[inside("RU,UA,BY,CN,KP,KR,LB,MX,SA,VN,TH,VE,IN,IR,US,IL,BH,PK,QA,AE,KW,JO,IQ,IRQ")][outside("MO")] {
   set .node_alert;
 }
 
@@ -32,7 +33,7 @@ node.node_alert {
 
 /* Ways */
 
-way[inside("RU,UA,BY,CN,KP,KR,LB,MX,SA,VN,TH,VE,IN,IR,US,IL,YE,BH,PK,QA,AE,KW,JO,IQ,IRQ")][outside("MO")] {
+way[inside("RU,UA,BY,CN,KP,KR,LB,MX,SA,VN,TH,VE,IN,IR,US,IL,BH,PK,QA,AE,KW,JO,IQ,IRQ")][outside("MO")] {
   set .way_alert;
 }
 
