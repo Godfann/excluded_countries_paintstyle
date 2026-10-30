@@ -20,7 +20,7 @@ meta {
 
 /* Nodes */
 
-node[inside("RU,UA,BY,CN,KP,KR,LB,MX,SA,VN,TH,VE,IN,IR,US,IL,BH,PK,QA,AE,KW,JO,IQ,IRQ")][outside("MO")] {
+node[inside("RU,UA,BY,CN,KP,KR,LB,MX,SA,VN,TH,VE,IN,IR,US,IL,PK")][outside("MO")] {
   set .node_alert;
 }
 
@@ -33,7 +33,7 @@ node.node_alert {
 
 /* Ways */
 
-way[inside("RU,UA,BY,CN,KP,KR,LB,MX,SA,VN,TH,VE,IN,IR,US,IL,BH,PK,QA,AE,KW,JO,IQ,IRQ")][outside("MO")] {
+way[inside("RU,UA,BY,CN,KP,KR,LB,MX,SA,VN,TH,VE,IN,IR,US,IL,PK")][outside("MO")] {
   set .way_alert;
 }
 
