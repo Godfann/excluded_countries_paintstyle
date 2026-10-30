@@ -16,11 +16,12 @@ meta {
 5.0_2025_09-08:  Exclude Iran as it is open for editing;
 6.0_2025_10-13:  Exclude Vietnam & Thailand as they out of scope countries;
 7.0_2026-07-31:  Exclude Yemen country from out of scope countries;
+8.0_2026-10-30:  Remove countries BHR,IRQ,JOR,KWT,QAT,ARE,PAK from out of scope countries;
 */
 
 /* Nodes */
 
-node[inside("RU,UA,BY,CN,KP,KR,LB,MX,SA,VN,TH,VE,IN,IR,US,IL,PK")][outside("MO")] {
+node[inside("RU,UA,BY,CN,KP,KR,LB,MX,SA,VN,TH,VE,IN,IR,US,IL")][outside("MO")] {
   set .node_alert;
 }
 
@@ -33,7 +34,7 @@ node.node_alert {
 
 /* Ways */
 
-way[inside("RU,UA,BY,CN,KP,KR,LB,MX,SA,VN,TH,VE,IN,IR,US,IL,PK")][outside("MO")] {
+way[inside("RU,UA,BY,CN,KP,KR,LB,MX,SA,VN,TH,VE,IN,IR,US,IL")][outside("MO")] {
   set .way_alert;
 }
 
